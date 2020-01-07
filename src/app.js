@@ -12,9 +12,10 @@ const App = () => {
       <form
         onSubmit={e => {
           e.preventDefault();
-          window.location = `${
-            window.location.origin
-          }?#url=${encodeURIComponent(urlRef.current.value)}`;
+          window.location = `${window.location.origin}${
+            window.location.pathname
+          }
+          ?#url=${encodeURIComponent(urlRef.current.value)}`;
         }}
       >
         <input ref={urlRef} placeholder="start url" />
