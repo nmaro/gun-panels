@@ -14,8 +14,8 @@ const App = () => {
           e.preventDefault();
           window.location = `${window.location.origin}${
             window.location.pathname
-          }
-          ?#url=${encodeURIComponent(urlRef.current.value)}`;
+          }#url=${encodeURIComponent(urlRef.current.value)}`;
+          window.location.reload();
         }}
       >
         <input ref={urlRef} placeholder="start url" />
